@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Maná del Cielo</title>
+  <link rel="icon" href="assets/logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/logo.ico">
+  <meta name="theme-color" content="#c49b50">
+  <meta name="description" content="Maná del Cielo - Comunidad cristiana. Servicios, videos y apoyo. Únete y dona.">
+  <meta property="og:title" content="Maná del Cielo">
+  <meta property="og:description" content="Maná del Cielo - Comunidad cristiana. Servicios, videos y apoyo.">
+  <meta property="og:image" content="assets/logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="fb-root"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo.jpg" alt="Maná del Cielo" class="logo">
+        <div class="brand-text">
+          <div class="site-title"></div>
+          <div class="tagline">Iglesia cristiana</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">Acerca</a>
+        <a href="#events">Eventos</a>
+        <a href="#contact">Contacto</a>
+        <button id="donateBtn" class="btn donate">Donar</button>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+  <img src="assets/home.png" alt="Iglesia Maná del Cielo" class="hero-img">
+      <div class="hero-content container">
+        <h1>Bienvenidos a Maná del Cielo</h1>
+        <p>Un lugar de fe, comunidad y esperanza. Únete a nuestros servicios y actividades.</p>
+        <div class="hero-actions">
+          <a href="#events" class="btn primary">Ver eventos</a>
+          <button id="heroDonate" class="btn donate light">Donar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>Acerca de Nosotros</h2>
+      <p>Maná del Cielo es una comunidad cristiana dedicada a servir y transmitir el amor de Dios. Ofrecemos servicios semanales, grupos pequeños y ministerios para todas las edades.</p>
+      <div class="video-strip-wrap">
+        <h3>Escucha en casa!</h3>
+        <div class="video-strip-controls">
+          <button class="vs-left" aria-label="Desplazar a la izquierda">‹</button>
+          <div class="video-strip" id="videoStrip" aria-label="Videos de Facebook">
+            <!-- Small lazy Facebook plugin previews. Replace data-video-page with your Facebook video page URLs -->
+            <div class="video-card" data-video-page="https://www.facebook.com/facebook/videos/10153231379946729/" role="button" tabindex="0">
+              <div class="video-preview">
+                <!-- iframe src is deferred until user consents. data-src holds the actual FB plugin URL -->
+                <iframe loading="lazy" data-src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61571927244658%2Fvideos%2F644382598732546%2F&show_text=false&width=560&t=0" src="about:blank" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen></iframe>
+              </div>
+              <span class="video-title">09/14/2025</span>
+            </div>
+
+            <div class="video-card" data-video-page="https://www.facebook.com/facebook/videos/10152531501674481/" role="button" tabindex="0">
+              <div class="video-preview">
+                <!-- deferred iframe to avoid loading third-party content until consent -->
+                <iframe loading="lazy" data-src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61571927244658%2Fvideos%2F1276348334170429%2F&show_text=false&width=560&t=0" src="about:blank" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen></iframe>
+              </div>
+              <span class="video-title">09/07/2025</span>
+            </div>
+          </div>
+          <button class="vs-right" aria-label="Desplazar a la derecha">›</button>
+        </div>
+        <div class="video-strip-progress"><div class="video-strip-progress-bar" id="videoStripProgress"></div></div>
+      </div>
+    </section>
+
+    <section id="events" class="container events">
+      <h2>Anuncios y Eventos</h2>
+      <div class="event-grid">
+        <article class="event">
+          <img src="assets/event1.png" alt="Evento 1">
+          <h3>Oraciónes</h3>
+          <p>Todos los martes | 6:00 PM - 7:00 PM</p>
+        </article>
+        <article class="event">
+          <img src="assets/event2.png" alt="Evento 2">
+          <h3>Discipulado</h3>
+          <p>Jueves | 6:00 - 7:00 PM</p>
+        </article>
+      </div>
+    </section>
+
+  <section id="contact" class="container contact golden">
+      <div class="contact-inner">
+        <div class="contact-info">
+          <h2>Contacto y Información</h2>
+          <p>Dirección: 4505 Allstate Dr #218 Riverside CA 92501</p>
+          <p>Teléfono: (562) 257-8553</p>
+        </div>
+        <div class="socials" aria-label="Redes sociales">
+          <!-- Replace data-link values with your pages -->
+          <a class="social-link" id="social-fb" data-link="https://www.facebook.com/profile.php?id=61571927244658&mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <img src="assets/facebook.svg" alt="Facebook">
+          </a>
+          <a class="social-link" id="social-yt" data-link="https://youtube.com/@pastorjosueyleticiasales-k2k?si=DLIjlKfLE-LGwRzn&cxqr=h7rB6Tl1NTXYMSB-Pr1GPP" target="_blank" rel="noopener noreferrer" title="YouTube">
+            <img src="assets/youtube.svg" alt="YouTube">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Maná del Cielo</p>
+      <div>
+        <small>Apoya nuestra misión</small>
+          <nav class="footer-links" aria-label="Enlaces legales" style="margin-left:1rem; display:inline-block">
+            <a href="privacy.html">Política de privacidad</a> · 
+            <a href="terms.html">Términos</a>
+          </nav>
+        <!-- Cookie preferences can be changed via the footer link (removed) or re-opened programmatically -->
+      </div>
+    </div>
+  </footer>
+
+  <div id="donationModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar">×</button>
+      <h3>Donar a Maná del Cielo</h3>
+      <p>Elige una cantidad o ingresa la tuya.</p>
+      <div class="donation-amounts">
+        <button class="amt" data-amount="10">$10</button>
+        <button class="amt" data-amount="25">$25</button>
+        <button class="amt" data-amount="50">$50</button>
+      </div>
+      <label>
+        Otra cantidad
+        <input type="number" id="customAmount" min="1" placeholder="5">
+      </label>
+      <div class="donation-actions">
+            <div class="payment-methods" role="tablist" aria-label="Métodos de pago">
+              <button class="pay-method" id="pm-apple" data-method="apple" aria-pressed="false" title="Apple Pay"> 
+                <img src="assets/apple-pay.svg" onerror="this.onerror=null;this.src='assets/apple-pay.png'" alt="Apple Pay" class="pm-icon">
+              </button>
+              <button class="pay-method" id="pm-card" data-method="card" aria-pressed="false" title="Tarjeta"> 
+                <img src="assets/card.svg" onerror="this.onerror=null;this.src='assets/card.png'" alt="Tarjeta" class="pm-icon">
+              </button>
+            </div>
+            <button id="payRequestBtn" class="btn primary" style="display:none">Pagar (Apple Pay / Tarjeta)</button>
+        <p class="note">Nota: Apple Pay requiere HTTPS y configuración de dominio. Aquí se muestra una demo local con Payment Request API y fallback.</p>
+      </div>
+          <div class="card-fallback note" aria-hidden="true" style="display:none; margin-top:0.75rem;">
+            <p>Si tu navegador no soporta Payment Request, ingresa los datos de tarjeta en el formulario seguro del proveedor (demo):</p>
+            <div class="card-method fullwidth" style="display:none">
+              <label>Nombre en la tarjeta <input type="text" id="cardName"></label>
+              <label>Tarjeta <input type="text" id="cardNumber" placeholder="4242 4242 4242 4242" inputmode="numeric" autocomplete="cc-number"></label>
+              <div class="card-row">
+                <label>Expiration Date <input type="text" id="cardExp" placeholder="12/34" inputmode="numeric" autocomplete="cc-exp"></label>
+                <label>CVC <input type="text" id="cardCvc" placeholder="123" inputmode="numeric" autocomplete="cc-csc"></label>
+              </div>
+              <div class="card-helpers"><span id="cardValidState" aria-live="polite"></span></div>
+              <button id="cardSubmit" class="btn primary" disabled>Pagar con tarjeta (demo)</button>
+            </div>
+            <div class="apple-method" style="display:none">
+              <p>Apple Pay se activará si tu dispositivo y sitio están configurados. Si no, puedes usar la tarjeta.</p>
+              <button id="applePayBtn" class="btn primary">Pagar con Apple Pay (demo)</button>
+            </div>
+          </div>
+      <div id="paymentResult" class="payment-result" role="status"></div>
+    </div>
+  </div>
+
+  <!-- Video lightbox modal -->
+  <div id="videoLightbox" class="modal" aria-hidden="true">
+    <div class="modal-content video-modal-content">
+      <button class="modal-close" aria-label="Cerrar video">×</button>
+      <!-- loader shown while iframe loads -->
+      <div id="videoContainer" class="video-container" style="min-height:240px; position:relative"></div>
+    </div>
+  </div>
+
+  <script>
+    // Handler for when the cookie consent script detects a decline.
+    // Keeps markup clean by wiring after DOM is ready.
+    (function(){
+      function onDecline(){
+        try{ if(window.unloadThirdParty) window.unloadThirdParty(); }catch(e){}
+        try{ if(window.revokeCookieConsent) window.revokeCookieConsent(); }catch(e){}
+      }
+      // attach immediately if cookie-consent already loaded
+      if(window.onCookieDecline) window.onCookieDecline = onDecline;
+      else window.onCookieDecline = onDecline;
+    })();
+  </script>
+
+  <!-- Facebook JS SDK loader: replace YOUR_FACEBOOK_APP_ID with your app id -->
+  <script>
+    // Consent-gated Facebook SDK loader
+    window.loadFacebookSdk = function(appId){
+      window.fbAsyncInit = function() {
+        if(window.FB){ FB.init({ appId: appId || 'YOUR_FACEBOOK_APP_ID', xfbml: true, version: 'v17.0' }); }
+      };
+      if(document.getElementById('facebook-jssdk')) return;
+      (function(d, s, id){
+        var js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        var fjs = d.getElementsByTagName(s)[0];
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    };
+    // If user already accepted cookies, load SDK now (cookie-consent stores 'cookie_consent_v1' = 'yes')
+    try{
+      if(localStorage.getItem('cookie_consent_v1') === 'yes'){
+        if(window.loadFacebookSdk) window.loadFacebookSdk();
+        if(window.loadDeferredThirdParty) window.loadDeferredThirdParty();
+      }
+    }catch(e){/* ignore */}
+  </script>
+
+  <script src="script.js"></script>
+  <script src="scripts/cookie-consent.js"></script>
+  <!-- In-page legal notification banner (privacy / terms) -->
+  <div id="legalBanner" class="legal-banner" aria-hidden="true">
+    <div class="legal-banner-inner container">
+      <div class="legal-content" id="legalContent">
+        <!-- content populated by JS -->
+      </div>
+      <div class="legal-actions">
+        <button id="legalClose" class="btn" aria-label="Cerrar">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    // React to cookie consent changes
+    window.onCookieConsent = function(choice){
+      if(choice === 'yes'){
+        // Load third-party scripts that require consent
+        if(window.loadFacebookSdk) window.loadFacebookSdk();
+        // Populate any deferred iframe sources (e.g., Facebook plugin previews)
+        if(window.loadDeferredThirdParty) window.loadDeferredThirdParty();
+        // Add additional consent-gated loaders here (e.g., analytics)
+      } else {
+        // User declined - ensure we do not load analytics or pixels
+        if(window.unloadThirdParty) window.unloadThirdParty();
+      }
+    };
+  </script>
+  <script>
+    // Wire social links from data attributes or window.SOCIAL_LINKS
+    (function(){
+      const socials = [{id:'social-fb', key:'facebook'}, {id:'social-yt', key:'youtube'}];
+      socials.forEach(s => {
+        const el = document.getElementById(s.id);
+        if(!el) return;
+        const data = el.getAttribute('data-link');
+        const globalLinks = (window.SOCIAL_LINKS && window.SOCIAL_LINKS[s.key]) ? window.SOCIAL_LINKS[s.key] : null;
+        const href = globalLinks || data || '#';
+        el.setAttribute('href', href);
+        el.addEventListener('click', (e)=>{
+          if(!href || href==='#'){ e.preventDefault(); alert('Enlace de ' + s.key + ' no configurado.'); }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
