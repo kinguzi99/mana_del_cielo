@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   // Enhanced animation for animation1.png
   (function animatedImageEnhancement(){
-    const animatedImg = $('#animatedImage');
+    const animatedImg = document.getElementById('animatedImage');
     if(!animatedImg) return;
     
     let mouseX = 0, mouseY = 0;
