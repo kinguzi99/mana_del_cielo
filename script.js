@@ -496,6 +496,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
     if (verseText) {
       verseText.textContent = 'Testing text update...';
       console.log('Test text set, current content:', verseText.textContent);
+      // Force a test verse immediately
+      setTimeout(() => {
+        verseText.textContent = 'Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna.';
+        if (verseReference) {
+          verseReference.textContent = 'Juan 3:16';
+        }
+        if (verseLoading) {
+          verseLoading.style.display = 'none';
+        }
+        console.log('Force test verse loaded');
+      }, 2000);
     }
     
     if(!verseText || !verseReference || !verseContainer) {
@@ -711,6 +722,34 @@ document.addEventListener('DOMContentLoaded', ()=>{
         if (verseText) verseText.textContent = '';
         if (verseReference) verseReference.textContent = '';
         
+        // TEMPORARY: Force use fallback verse for debugging
+        console.log('Using immediate fallback verse for testing');
+        const verse = {
+          text: 'Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna.',
+          reference: 'Juan 3:16'
+        };
+        
+        // Hide loading indicator immediately
+        if (verseLoading) {
+          console.log('Hiding loading indicator');
+          verseLoading.style.display = 'none';
+        }
+        
+        // Update verse text immediately
+        console.log('Updating verse text immediately');
+        if (verseText) {
+          verseText.textContent = verse.text;
+          console.log('Updated verseText content:', verseText.textContent.substring(0, 50) + '...');
+        }
+        if (verseReference) {
+          verseReference.textContent = verse.reference;
+          console.log('Updated verseReference content:', verseReference.textContent);
+        }
+        
+        console.log('Force verse update completed');
+        return;
+        
+        /* ORIGINAL CODE COMMENTED OUT FOR DEBUGGING
         const todaysReference = getTodaysVerse();
         console.log('Today\'s verse reference:', todaysReference);
         
@@ -790,6 +829,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             console.log('Safety net: Force updated verseReference');
           }
         }, 8000);
+        */
         
       } catch (error) {
         console.error('Error loading daily verse:', error);
